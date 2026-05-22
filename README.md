@@ -1,4 +1,6 @@
-# opencode-9router-plugin
+# Opencode 9router Plugin
+
+![Preview plugin](./assets/images/cover.png)
 
 Dynamic 9router provider plugin for [opencode](https://opencode.ai/).
 
@@ -132,37 +134,6 @@ Do not hardcode model lists. The plugin discovers them dynamically at startup.
 - `OPENCODE_9ROUTER_API_KEY` (recommended): API key used by provider options and model discovery requests
 - `OPENCODE_9ROUTER_TIMEOUT_MS` (optional): fetch timeout in ms. Default `5000`
 
-## Local Development
-
-```bash
-npm install
-npm run build
-node dist/cli.js check
-```
-
-Generated output will be in `dist/`.
-
-## Publish to npm
-
-1. Update package name/version in `package.json`.
-2. Login:
-   ```bash
-   npm login
-   ```
-3. Publish:
-   ```bash
-   npm publish --access public
-   ```
-
-After publish, users can install with:
-
-```bash
-opencode plugin opencode-9router-plugin
-```
-
-## GitHub Release Flow
-
-1. Push this repo to GitHub.
 2. Create a tag such as `v0.1.0`.
 3. Publish to npm manually or with GitHub Actions on tagged releases.
 

@@ -6,7 +6,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "opencode-9router-plugin": "./dist/cli.js"
+    "opencode-9router-plugin": "dist/cli.js"
   },
   "exports": {
     ".": {
@@ -16,6 +16,7 @@
   },
   "files": [
     "dist",
+    "assets",
     "README.md",
     "LICENSE"
   ],
