@@ -27,7 +27,6 @@ const TEMPLATE: OpenCodeModelEntry = {
 function mapModel(dev: ModelsDevModel): OpenCodeModelEntry {
   const entry: OpenCodeModelEntry = {};
 
-  if (dev.id) entry.id = dev.id;
   if (dev.name) entry.name = dev.name;
   if (dev.family) entry.family = dev.family;
   if (dev.release_date) entry.release_date = dev.release_date;
@@ -77,8 +76,8 @@ export async function resolveModel(
     entry = devModel ? mapModel(devModel) : { ...TEMPLATE };
   }
 
-  // Always prefix display name so OpenCode shows "9Router <id>"
-  entry.name = `9Router ${fullId}`;
+  entry.id = fullId;
+  entry.name = fullId;
 
   return entry;
 }
